@@ -25,23 +25,23 @@ function gridDisplay(size) {
         const div = document.createElement('div');
         board.addEventListener('mouseover', addColor);   
         board.addEventListener('mousedown', addColor);
-        div.style.opacity = '1.01';
+        div.style.opacity = '1.10';
         board.appendChild(div);
     }
 }
 
 function addColor(e){
     if(e.type === 'mouseover' && !desenha) return
-        if (e.target.style.opacity == 1.01) {
-            e.target.style.opacity = '0';
+        if (e.target.style.opacity == 1.10) {
+            e.target.style.opacity = '1.1';
         }
         e.target.style.backgroundColor = color();
          let opacidadeAntes = Number(e.target.style.opacity);
-        if (opacidadeAntes <= 1) {
-            opacidadeAntes += 0.1
+        if (opacidadeAntes >= 0.1) {
+            opacidadeAntes -= 0.1;
         }
         e.target.style.opacity = opacidadeAntes;
-    }
+}
 
 function color() {
     let escolheCor = `hsl(${Math.random() * 360},100%,50%)`;
@@ -55,8 +55,8 @@ function updateSize(value){
 
 
 mySlider.addEventListener('change', () => {
-    clearGrid();
     gridDisplay(mySlider.value);
+    clearGrid();
 });
 
 function clearGrid(){
