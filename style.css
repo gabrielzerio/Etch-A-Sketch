@@ -6,6 +6,7 @@
 body {
     width: 100%;
     font: .9em/1.2 Arial, Helvetica, sans-serif;
+    background-color: royalblue;
 }
 
 main{
@@ -17,24 +18,32 @@ main{
 }
 
 .options{ 
+    height: fit-content;
+    font-size: 16px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
     padding: 11px;
     margin-top: 100px;
     border: 1px solid black;
-    display: flex;
-    width: 230px;
-    flex-direction: column;
-
+    border-radius: 20px;
+    width: 240px;
 }
-.slider{
-   display: flex;
-
+.clear button{
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
 }
+
+
 
 .container {
     background-color: black;
     display: grid;
     width: 600px;
     height: 600px;
+    margin-top: 20px;
     /* grid-template-columns: 2fr 1fr 2fr; */
     /*grid-template-columns: repeat(20, 1fr);*/
     /*grid-template-rows: repeat(20, 1fr); */
