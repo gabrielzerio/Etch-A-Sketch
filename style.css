@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    font: .9em/1.2 Arial, Helvetica, sans-serif;
+}
+
+main{
+    width: fit-content;   
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr ;
+    column-gap: 20px;
+}
+
+.options{ 
+    padding: 11px;
+    margin-top: 100px;
+    border: 1px solid black;
+    display: flex;
+    width: 230px;
+    flex-direction: column;
+
+}
+.slider{
+   display: flex;
+
+}
+
+.container {
+    
+    display: grid;
+    width: 600px;
+    height: 600px;
+    /* grid-template-columns: 2fr 1fr 2fr; */
+    /*grid-template-columns: repeat(20, 1fr);*/
+    /*grid-template-rows: repeat(20, 1fr); */
+    /*aqui nesse caso é redundante */
+    
+    /*gap: 10px 15px; /*shorthand para column e row (gap)*/
+    /* ou gap:10px se o column e row eu quisesse 10px */
+    /* ou grid-gap  é a versão completa de gap é melhor usar esse pois o gap é recente*/
+    /* column-gap: 10px; 
+   row-gap: 10px; */
+}
+
+.container>div {
+    /*border-radius: 5px;*/
+    background-color: rgb(190, 232, 220);
+    user-select: none;
+}
